@@ -9,6 +9,9 @@ COPY talairach_mixed_with_skull.gca talairach_mixed_with_skull.gca
 
 #TODO:
 #Add the requirements .txt; probably flask, etc.
+COPY requirements.txt requirements.txt
+RUN python -m pip install -r requirements.txt
+
 
 #Start the python Flask Server
 CMD ["python", "main.py"]
